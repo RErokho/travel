@@ -1,0 +1,18 @@
+@mixin flex(
+  $direction: column,
+  $align: center,
+  $justify: center,
+  $grow: 0,
+  $shrink: 0,
+  $basis: auto
+) {
+  display: flex;
+  flex-direction: $direction;
+
+  align-items: $align;
+  justify-content: $justify;
+
+  flex-grow: $grow;
+  flex-shrink: $shrink;
+  flex-basis: $basis;
+}
