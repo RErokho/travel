@@ -1,0 +1,80 @@
+@import "flex.scss";
+@import "colors.scss";
+@import "text.scss";
+@import "constants.scss";
+@import "shadow.scss";
+
+.header {
+  background-color: $color-primary-70;
+  box-shadow: $shadow-2;
+
+  @include flex();
+
+  &__container {
+    @include flex(row, center, space-between);
+
+    width: $default-width;
+
+    .logo {
+      @include flex(row);
+
+      margin-left: $content-margin;
+      padding: 29px 0;
+
+      &__icon {
+        height: 30px;
+        width: 30px;
+      }
+
+      &__title {
+        @include text("Magra", normal, 600, 32px, $color-tertiary);
+
+        margin-left: 6px;
+      }
+    }
+
+    .navigation {
+      margin-left: 145px;
+
+      @include flex(row, center, space-between);
+
+      &__link {
+        @include text("Red Hat Text", normal, 500, 16px, $color-tertiary);
+
+        cursor: pointer;
+        padding: 37px 21px;
+        transition-duration: 0.2s;
+
+        &:hover {
+          background-color: $color-primary-70-hover;
+        }
+      }
+
+      &__tab {
+        @include flex();
+      }
+    }
+
+    .authorization {
+      margin: 0 $content-margin 0 175px;
+
+      &__btn {
+        &--login {
+          @include text("Red Hat Text", normal, 500, 16px, $color-tertiary);
+
+          background-color: $color-secondary;
+          border: 0;
+          border-radius: 10px;
+          box-shadow: $shadow-1;
+          cursor: pointer;
+          padding: 12.5px 30px;
+          transition-duration: 0.2s;
+
+          &:hover {
+            background-color: $color-secondary-hover;
+          }
+        }
+      }
+    }
+  }
+}

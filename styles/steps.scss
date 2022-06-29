@@ -1,0 +1,43 @@
+@import "text.scss";
+@import "colors.scss";
+@import "flex.scss";
+
+.steps {
+  @include flex(column, center, center);
+
+  margin-top: 86.5px;
+  width: 100%;
+
+  &__header {
+    @include text("Red Hat Text", normal, 500, 40px, $color-primary);
+  }
+
+  &__container {
+    @include flex(row, center, center);
+
+    margin-top: 46.5px;
+    width: 100%;
+
+    .step {
+      @include flex(column, center, center, 2, 1);
+
+      width: calc(100% / 3);
+
+      &__icon {
+        @include flex(column, center, center);
+
+        background-color: $color-primary;
+        border-radius: 16px;
+        height: 100px;
+
+        width: 100px;
+      }
+
+      &__description {
+        @include text("Aleo", normal, 400, 20px, $color-secondary);
+
+        margin-top: 32px;
+      }
+    }
+  }
+}
