@@ -1,0 +1,49 @@
+@import "constants.scss";
+@import "colors.scss";
+@import "text.scss";
+@import "flex.scss";
+@import "shadow.scss";
+
+.preview {
+  margin: 25px 428px 0 $content-margin;
+
+  &__header {
+    @include text("Aleo", normal, 700, 80px, $color-tertiary, 96px);
+  }
+
+  &__description {
+    @include text("Aleo", italic, 700, 20px, $color-tertiary);
+
+    margin-top: 40px;
+  }
+
+  &__start {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 16px;
+    margin-top: 50px;
+
+    @include flex(row, center, space-between);
+
+    .start__description {
+      @include text("Aleo", italic, 400, 24px, $color-primary);
+
+      margin: 35.5px 0 35.5px 41px;
+    }
+
+    .start__btn {
+      @include text("Red Hat Text", normal, 500, 24px, $color-tertiary);
+
+      background-color: $color-secondary;
+      border-radius: 10px;
+      box-shadow: $shadow-3;
+      cursor: pointer;
+      margin: 18px;
+      padding: 17.5px 32.5px;
+      transition-duration: 0.2s;
+
+      &:hover {
+        background-color: $color-secondary-hover;
+      }
+    }
+  }
+}
